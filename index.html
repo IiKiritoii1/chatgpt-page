@@ -18,9 +18,9 @@
           "Authorization": "Bearer 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" // Replace with your actual API key
         },
         body: JSON.stringify({
-          model: "text-davinci-003",
-          prompt: userInput,
-          max_tokens: 150
+        model: 'gpt-3.5-turbo', // Use this model for chat
+            messages: [{ role: 'user', content: message }],
+            max_tokens: 50
         })
       });
       
