@@ -20,15 +20,15 @@
         return; // Exit if no input
       }
 
-      const response = await fetch("https://api.openai.com/v1/chat/completions", { // Change the endpoint to chat/completions
+      const response = await fetch("https://api.openai.com/v1/chat/completions", { // Use chat/completions endpoint
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Authorization": "Bearer sk-FPoAx8sl8wBD0nagB3XUq0nuq7nPi5mfSx_aV7vcR9T3BlbkFJGqfBhUnwEG5s57X1HDltgRjxvHQPlfhSLNooUmQQIA" // Replace with your actual API key
         },
         body: JSON.stringify({
-          model: 'gpt-3.5-turbo', // Use this model for chat
-          messages: [{ role: 'user', content: userInput }], // Use userInput variable
+          model: 'gpt-3.5-turbo', // Use the chat model
+          messages: [{ role: 'user', content: userInput }], // Correctly reference userInput
           max_tokens: 50
         })
       });
